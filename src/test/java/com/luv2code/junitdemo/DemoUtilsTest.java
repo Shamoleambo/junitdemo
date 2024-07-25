@@ -6,9 +6,11 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.DisplayNameGeneration;
+import org.junit.jupiter.api.DisplayNameGenerator;
 import org.junit.jupiter.api.Test;
 
+@DisplayNameGeneration(DisplayNameGenerator.Simple.class)
 class DemoUtilsTest {
 
 	DemoUtils sut;
@@ -19,7 +21,6 @@ class DemoUtilsTest {
 	}
 
 	@Test
-	@DisplayName("Equals and Not Equals")
 	public void testEqualsAndNotEquals() {
 		DemoUtils sut = new DemoUtils();
 
@@ -28,7 +29,6 @@ class DemoUtilsTest {
 	}
 
 	@Test
-	@DisplayName("Null and Not Null")
 	public void testNullAndNotNull() {
 		DemoUtils sut = new DemoUtils();
 
