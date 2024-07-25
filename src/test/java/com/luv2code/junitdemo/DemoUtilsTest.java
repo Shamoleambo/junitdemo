@@ -5,6 +5,9 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -16,6 +19,22 @@ class DemoUtilsTest {
 	public void setupBeforeEach() {
 		this.sut = new DemoUtils();
 		System.out.println("@BeforeEach execute before the execution of each test");
+	}
+
+	@AfterEach
+	void tearDownAfterEach() {
+		System.out.println("Running @AfterEach");
+		System.out.println();
+	}
+
+	@BeforeAll
+	static void setupBeforeAll() {
+		System.out.println("@BeforeAll running");
+	}
+
+	@AfterAll
+	static void tearDownAfterAll() {
+		System.out.println("Running @AfterAll");
 	}
 
 	@Test
