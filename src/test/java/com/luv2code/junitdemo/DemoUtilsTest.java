@@ -5,12 +5,23 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class DemoUtilsTest {
 
+	DemoUtils sut;
+
+	@BeforeEach
+	public void setupBeforeEach() {
+		this.sut = new DemoUtils();
+		System.out.println("@BeforeEach execute before the execution of each test");
+	}
+
 	@Test
 	public void testEqualsAndNotEquals() {
+		System.out.println("Running test: testEqualsAndNotEquals");
+
 		DemoUtils sut = new DemoUtils();
 
 		assertEquals(6, sut.add(3, 3), "3 + 3 must be 6");
@@ -19,6 +30,8 @@ class DemoUtilsTest {
 
 	@Test
 	public void testNullAndNotNull() {
+		System.out.println("Running test: testNullAndNotNull");
+
 		DemoUtils sut = new DemoUtils();
 
 		String isNull = null;
