@@ -3,14 +3,14 @@ package com.luv2code.junitdemo;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNotSame;
 import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertSame;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayNameGeneration;
-import org.junit.jupiter.api.DisplayNameGenerator;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-@DisplayNameGeneration(DisplayNameGenerator.Simple.class)
 class DemoUtilsTest {
 
 	DemoUtils sut;
@@ -21,6 +21,7 @@ class DemoUtilsTest {
 	}
 
 	@Test
+	@DisplayName("Equals and Not Equals")
 	public void testEqualsAndNotEquals() {
 		DemoUtils sut = new DemoUtils();
 
@@ -29,6 +30,7 @@ class DemoUtilsTest {
 	}
 
 	@Test
+	@DisplayName("Null and Not Null")
 	public void testNullAndNotNull() {
 		DemoUtils sut = new DemoUtils();
 
@@ -37,5 +39,14 @@ class DemoUtilsTest {
 
 		assertNull(sut.checkNull(isNull), "Object should be null");
 		assertNotNull(sut.checkNull(notNull), "Object should not be null");
+	}
+
+	@Test
+	@DisplayName("Same and Not Same")
+	void testSameAndNotSame() {
+		String str = "luv2code";
+
+		assertSame(sut.getAcademy(), sut.getAcademyDuplicate(), "Objects should refer to the same object");
+		assertNotSame(str, sut.getAcademy(), "Objects should not refer to the same object");
 	}
 }
