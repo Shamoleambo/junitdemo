@@ -1,6 +1,7 @@
 package com.luv2code.junitdemo;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertIterableEquals;
@@ -10,10 +11,12 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNotSame;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertSame;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -90,5 +93,17 @@ class DemoUtilsTest {
 		List<String> lines = List.of("luv", "2", "code");
 
 		assertLinesMatch(lines, this.sut.getAcademyInList());
+	}
+
+	@Test
+	@DisplayName("Test Throws and Does Not Throw")
+	void testThrowAndDoesNotThrow() {
+		assertThrows(Exception.class, () -> {
+			this.sut.throwException(-1);
+		}, "Should throw exception");
+
+		assertDoesNotThrow(() -> {
+			this.sut.throwException(1);
+		}, "Should not throw exception");
 	}
 }
