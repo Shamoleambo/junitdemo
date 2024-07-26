@@ -12,8 +12,10 @@ import static org.junit.jupiter.api.Assertions.assertNotSame;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTimeoutPreemptively;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.junit.jupiter.api.Assertions;
@@ -105,5 +107,11 @@ class DemoUtilsTest {
 		assertDoesNotThrow(() -> {
 			this.sut.throwException(1);
 		}, "Should not throw exception");
+	}
+	
+	@Test
+	@DisplayName("Timeout")
+	void testTimeout() {
+		assertTimeoutPreemptively(Duration.ofSeconds(3), () -> {this.sut.checkTimeout();}, "Method should execute in 3 seconds");
 	}
 }
