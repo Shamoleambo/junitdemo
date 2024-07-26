@@ -3,12 +3,15 @@ package com.luv2code.junitdemo;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNotSame;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -70,5 +73,13 @@ class DemoUtilsTest {
 		String[] strArr = { "A", "B", "C" };
 
 		assertArrayEquals(strArr, this.sut.getFirstThreeLettersOfAlphabet());
+	}
+
+	@Test
+	@DisplayName("Iterable Equals")
+	void testIterableEquals() {
+		List<String> iterable = List.of("luv", "2", "code");
+
+		assertIterableEquals(iterable, this.sut.getAcademyInList());
 	}
 }
