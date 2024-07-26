@@ -1,5 +1,6 @@
 package com.luv2code.junitdemo;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
@@ -61,5 +62,13 @@ class DemoUtilsTest {
 
 		assertTrue(this.sut.isGreater(num2, num1));
 		assertFalse(this.sut.isGreater(num3, num2));
+	}
+
+	@Test
+	@DisplayName("Array Equals")
+	void testArrayEquals() {
+		String[] strArr = { "A", "B", "C" };
+
+		assertArrayEquals(strArr, this.sut.getFirstThreeLettersOfAlphabet());
 	}
 }
