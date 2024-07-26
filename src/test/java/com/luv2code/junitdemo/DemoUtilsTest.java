@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertIterableEquals;
+import static org.junit.jupiter.api.Assertions.assertLinesMatch;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNotSame;
@@ -81,5 +82,13 @@ class DemoUtilsTest {
 		List<String> iterable = List.of("luv", "2", "code");
 
 		assertIterableEquals(iterable, this.sut.getAcademyInList());
+	}
+
+	@Test
+	@DisplayName("Lines Match")
+	void testLinesMatch() {
+		List<String> lines = List.of("luv", "2", "code");
+
+		assertLinesMatch(lines, this.sut.getAcademyInList());
 	}
 }
