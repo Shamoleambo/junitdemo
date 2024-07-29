@@ -17,8 +17,11 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.EnabledOnOs;
+import org.junit.jupiter.api.condition.OS;
 
 class DemoUtilsTest {
 
@@ -30,6 +33,7 @@ class DemoUtilsTest {
 	}
 
 	@Test
+	@Disabled
 	@DisplayName("Equals and Not Equals")
 	public void testEqualsAndNotEquals() {
 		DemoUtils sut = new DemoUtils();
@@ -39,6 +43,7 @@ class DemoUtilsTest {
 	}
 
 	@Test
+	@EnabledOnOs(OS.LINUX)
 	@DisplayName("Null and Not Null")
 	public void testNullAndNotNull() {
 		DemoUtils sut = new DemoUtils();
@@ -51,6 +56,7 @@ class DemoUtilsTest {
 	}
 
 	@Test
+	@EnabledOnOs(OS.MAC)
 	@DisplayName("Same and Not Same")
 	void testSameAndNotSame() {
 		String str = "luv2code";
@@ -60,6 +66,7 @@ class DemoUtilsTest {
 	}
 
 	@Test
+	@EnabledOnOs({ OS.MAC, OS.WINDOWS })
 	@DisplayName("True False")
 	void testTrueFalse() {
 		int num1 = 3;

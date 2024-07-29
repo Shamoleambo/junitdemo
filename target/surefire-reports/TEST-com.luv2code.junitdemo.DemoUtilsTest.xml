@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.luv2code.junitdemo.DemoUtilsTest" time="0.083" tests="8" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.luv2code.junitdemo.DemoUtilsTest" time="0.072" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/tidz/Documents/estudos/dev-spring-boot/spring-boot-unit-testing-main/1.00-starting-project/target/surefire/surefirebooter2666190634050576458.jar /home/tidz/Documents/estudos/dev-spring-boot/spring-boot-unit-testing-main/1.00-starting-project/target/surefire 2024-07-29T13-00-32_962-jvmRun1 surefire8481850144628418986tmp surefire_03899484268179677577tmp"/>
+    <property name="sun.java.command" value="/home/tidz/Documents/estudos/dev-spring-boot/spring-boot-unit-testing-main/1.00-starting-project/target/surefire/surefirebooter3711876602125786514.jar /home/tidz/Documents/estudos/dev-spring-boot/spring-boot-unit-testing-main/1.00-starting-project/target/surefire 2024-07-29T13-02-24_649-jvmRun1 surefire3633124813362456833tmp surefire_016670652646246992976tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/tidz/Documents/estudos/dev-spring-boot/spring-boot-unit-testing-main/1.00-starting-project/target/test-classes:/home/tidz/Documents/estudos/dev-spring-boot/spring-boot-unit-testing-main/1.00-starting-project/target/classes:/home/tidz/.m2/repository/org/junit/jupiter/junit-jupiter/5.8.2/junit-jupiter-5.8.2.jar:/home/tidz/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/home/tidz/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/tidz/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/home/tidz/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/tidz/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.8.2/junit-jupiter-params-5.8.2.jar:/home/tidz/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/home/tidz/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -28,7 +28,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/home/tidz/Documents/estudos/dev-spring-boot/spring-boot-unit-testing-main/1.00-starting-project/target/surefire/surefirebooter2666190634050576458.jar"/>
+    <property name="surefire.real.class.path" value="/home/tidz/Documents/estudos/dev-spring-boot/spring-boot-unit-testing-main/1.00-starting-project/target/surefire/surefirebooter3711876602125786514.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.11+9-Ubuntu-122.04.1"/>
     <property name="user.name" value="tidz"/>
@@ -53,16 +53,12 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testThrowAndDoesNotThrow" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.031"/>
-  <testcase name="testSameAndNotSame" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.003"/>
-  <testcase name="testArrayEquals" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.003"/>
+  <testcase name="testThrowAndDoesNotThrow" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.029"/>
+  <testcase name="testSameAndNotSame" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.002"/>
+  <testcase name="testArrayEquals" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.002"/>
   <testcase name="testLinesMatch" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.004"/>
-  <testcase name="testNullAndNotNull" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.003"/>
-  <testcase name="testIterableEquals" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.002"/>
-  <testcase name="testEqualsAndNotEquals" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.004">
-    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 3 + 3 must be 6 ==> expected: <5> but was: <6>
-	at com.luv2code.junitdemo.DemoUtilsTest.testEqualsAndNotEquals(DemoUtilsTest.java:37)
-]]></failure>
-  </testcase>
-  <testcase name="testTrueFalse" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.002"/>
+  <testcase name="testNullAndNotNull" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.002"/>
+  <testcase name="testIterableEquals" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.001"/>
+  <testcase name="testEqualsAndNotEquals" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.003"/>
+  <testcase name="testTrueFalse" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.001"/>
 </testsuite>
