@@ -18,12 +18,8 @@ import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
 
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class DemoUtilsTest {
 
 	DemoUtils sut;
@@ -35,7 +31,6 @@ class DemoUtilsTest {
 
 	@Test
 	@DisplayName("Equals and Not Equals")
-	@Order(2)
 	public void testEqualsAndNotEquals() {
 		DemoUtils sut = new DemoUtils();
 
@@ -45,7 +40,6 @@ class DemoUtilsTest {
 
 	@Test
 	@DisplayName("Null and Not Null")
-	@Order(-20)
 	public void testNullAndNotNull() {
 		DemoUtils sut = new DemoUtils();
 
